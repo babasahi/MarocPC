@@ -1,102 +1,77 @@
-<?php 
-  
-  session_start();
+<?php
 
-   include("ConnectionBD.php");
-   include("TousLesFonctions.php");
+include("ConnectionBD.php");
 
-      
+if (isset($_POST['submitButton'])) {
 
-    if( $_SERVER['REQUEST_METHOD'] == "POST")
-  {
-       // something was posted
+  if (!empty($_POST['EmailAdresse']) && !empty($_POST['NomComplet']) && !empty($_POST['Password'])) {
 
-       
-       $NomComplet   = $_POST['NomComplet'];
-       $AdresseEmail = $_POST['EmailAdresse'];
-       $Password     = $_POST['Password'];
+    $name = $_POST['NomComplet'];
+    $email = $_POST['EmailAdresse'];
+    $password = $_POST['Password'];
 
+    $myQuery = "INSERT INTO clients (nom_client , email_client , pass_client) VALUES ('$name','$email','$password');";
+    $result = mysqli_query($link, $myQuery);
 
-       // check valid infos
-  if ( !empty( $AdresseEmail) && !empty($Password && !empty($NomComplet) && !is_numeric($NomComplet)) ){
+    if ($result) {
 
-           // save to data base
-           $id = num_aleatoire(20);
-            $enregist_au_bd = "INSERT INTO clients (id_client , nom_client, email_client, pass_client) VALUES ('$id','$NomComplet','$AdresseEmail','$Password')";
+      header("location:LoginPage.php");
+    } elseif (!$result) {
+      # code...
 
-            mysqli_query($link ,$enregist_au_bd);
-
-           header("Location:LoginPage.php");
-           die();
-
-      } else {
-        echo "Veuillez saisir des informations valides !";
-      }
+      echo "erreur";
     }
- ?>
+  }
+}
 
- <!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
   <title>Login Page</title>
-  
-  <link rel="stylesheet" href="mycss.css">
-  
-  <style type="text/css">
-    #header {
-      
-        max-height: 10%;
-        color: black;
-        background-color: yellow;
-        padding: 18px;
-    }
 
-    .logo {
-      font-size: 40px;
-      font-weight: bolder;
-      margin-top: 30px;
-      font-family: monospace;
-        }
-        
-          
-         
-  </style>
+  <link rel="stylesheet" href="SigninPageCSS.css">
+
+
 </head>
+
 <body>
-  <div id="header"> <p class="logo"> Maroc PC</p> 
-   </div>
-  
+  <div class="header">
+    <p class="logo"> Maroc PC</p>
+  </div>
 
-         <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
-         
 
-          <form class="loginBox" action="LoginPage.php" method="post" >
+  <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
 
-            <h1>Sign in</h1>
-       <input type="text" name="NomComplet" id="nomcomplet" placeholder="Nom Complet">
-       <input type="text" name="EmailAdresse" id="email" placeholder="Veuillez saisir votre email "> 
-       <input type="password" name="Password" id="password" placeholder="Veuillez saisir votre password">
-       <input type="submit" name="submitButton" value="Login">
-       <br> <br>
 
-        <a href="LoginPage.php" style="font-size: 14px;">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
-       
-       </form>
-      
-    </div>
-        
-      
-    
-      <div align="center" style="font-weight: bold; background-color: yellow ;display:inline-block; width: 1300px;">
-        <p style="font-size: 40px;">Contact Us</p> 
-         <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
- Adress &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
- Télephone : 212 522 231 560/565 <br>
- Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
-</p></div>
-       
-       
-   
+    <form class="SigninBox" action="SigninPage.php" method="post">
+
+      <h1>Sign in</h1>
+      <input type="text" name="NomComplet" placeholder="Nom Complet">
+      <input type="text" name="EmailAdresse" placeholder="Veuillez saisir votre email ">
+      <input type="password" name="Password" placeholder="Veuillez saisir votre password">
+      <input type="submit" name="submitButton" value="Sign In">
+      <br> <br>
+
+      <a href="LoginPage.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
+
+    </form>
+
+  </div>
+
+  <div class="contactUs">
+    <p style="font-size: 40px;">Contact Us</p>
+    <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
+      Adress &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
+      Télephone : 212 522 231 560/565 <br>
+      Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
+    </p>
+  </div>
+
+
+
 </body>
+
 </html>
