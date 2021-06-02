@@ -1,48 +1,123 @@
-<?php 
-  
-   include("ConnectionBD.php");
-   include("TousLesFonctions.php");
+<?php
 
+include("ConnectionBD.php");
+session_start();
 
- ?>
-
- <!DOCTYPE html>
+if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
+} else {
+  header("location:LoginPage.php");
+}
+?>
+<!DOCTYPE html>
 <html>
-<head>
-	<title> Administration Page</title>
-	<style type="text/css">
-		
-		#header {
-              color: black;
-			  background-color: yellow;
-			  padding: 18px;
-		}
 
-		
-		.logo {
-            font-size: 40px;
-			font-weight: bolder;
-			margin-top: 30px;
-			font-family: monospace;
-        }
-       
-	</style>
+<head>
+  <title> Administration Page</title>
+  <link rel="stylesheet" href="AdministratorPageCSS.css">
+
 </head>
+
 <body>
-      <div id="header"> <p class="logo"> Maroc PC</p> 
-	 </div>
-  <div id="main" style="background-image: url(/MarocPC/Images/MainPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
-         
-		
-	</div>
-    <div align="center" style="font-weight: bold; background-color: yellow ;display:inline-block; width: 1300px;">
-        <p style="font-size: 40px;">Contact Us</p> 
-         <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
- Adress &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
- Télephone : 212 522 231 560/565 <br>
- Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
-</p>
-</div>
-       
+  <div class="header">
+    <p class="logo"> Maroc PC</p>
+  </div>
+  <div class="main">
+
+
+    <table align="center">
+      <h2>Table clients</h2>
+      <tr>
+        <th> Id </th>
+        <th> Nom et Prénom</th>
+        <th> Email Adresse</th>
+        <th> Date Registration</th>
+
+      </tr>
+
+      <?php
+      $sql = "SELECT * FROM clients ";
+      $result = mysqli_query($link, $sql);
+
+      if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr><td>" . $row["id_client"] . "</td><td>" . $row["nom_client"] . "</td><td>"
+            . $row["email_client"]  . "</td><td>"  . $row["date_login_client"] . "</td></tr> . ";
+        }
+        echo "</table>";
+      } else {
+        echo "0 données";
+      }
+      ?>
+      <p> <br> <br> <br> <br></p>
+    </table>
+
+    <table align="center">
+      <h2>Table Produits</h2>
+      <tr>
+
+        <th> Id </th>
+        <th> Nom </th>
+        <th> Prix Unitaire</th>
+        <th> Inventaire</th>
+
+      </tr>
+
+      <?php
+      $sql = "SELECT * FROM produits ";
+      $result = mysqli_query($link, $sql);
+
+      if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr><td>" . $row["id_produit"] . "</td><td>" . $row["nom_produit"] . "</td><td>"
+            . $row["prix_produit"]  . "</td><td>"  . $row["inventaire_produit"] . "</td></tr> . ";
+        }
+        echo "</table>";
+      } else {
+        echo "0 données";
+      }
+      ?>
+      <p> <br> <br> <br> <br></p>
+
+    </table>
+
+    <table align="center">
+      <h2>Table achats</h2>
+      <tr>
+
+        <th> Id </th>
+        <th> id_client </th>
+        <th> id_produit</th>
+        <th> date_achat</th>
+
+      </tr>
+
+      <?php
+      $sql = "SELECT * FROM achat ";
+      $result = mysqli_query($link, $sql);
+
+      if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr><td>" . $row["id_achat"] . "</td><td>" . $row["id_client"] . "</td><td>"
+            . $row["id_produit"]  . "</td><td>"  . $row["date_achat"] . "</td></tr> . ";
+        }
+        echo "</table>";
+      } else {
+        echo "0 données";
+      }
+      ?>
+      <p> <br> <br> <br> <br></p>
+    </table>
+
+  </div>
+  <div class="contactUs">
+    <p style="font-size: 40px;">Contact Us</p>
+    <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
+      Adress &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
+      Télephone : 212 522 231 560/565 <br>
+      Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
+    </p>
+  </div>
+
 </body>
+
 </html>
