@@ -1,67 +1,80 @@
 
 
+<?php
+include("ConnectionBD.php");
+session_start();
+
+if (isset($_POST['submitButton'])) {
+
+  if (!empty($_POST['EmailAdresse']) && !empty($_POST['Password'])) {
+
+    $email = $_POST['EmailAdresse'];
+    $password = $_POST['Password'];
+
+    $myQuery = "SELECT * FROM clients WHERE email_client ='$email' LIMIT 1 ;";
+    $result = mysqli_query($link, $myQuery);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+      $data = mysqli_fetch_assoc($result);
+
+      if ($data['pass_client'] == $password) {
+
+        $_SESSION['IsLogedIn'] = true;
+        $_SESSION['userName'] = $data['nom_client'];
+        $_SESSION['userId']   = $data['id_client'];
+        echo "Loged in Sucefully !";
+        header("location:ShopingPage.php");
+      }
+
+      echo "Wrong Password or email ";
+    } elseif (!$result) {
+      echo "erreur";
+    }
+  }
+  echo "please enter valid infos";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Login Page</title>
-	
-  <link rel="stylesheet" href="mycss.css">
-  
-  <style type="text/css">
-		#header {
-      
-        max-height: 10%;
-			  color: black;
-			  background-color: yellow;
-			  padding: 18px;
-		}
+  <title>Login Page</title>
 
-		.logo {
-      font-size: 40px;
-			font-weight: bolder;
-			margin-top: 30px;
-			font-family: monospace;
-        }
-        
-          
-         
-	</style>
+  <link rel="stylesheet" href="LoginPageCSS.css">
+
 </head>
+
 <body>
-	<header id="header"> <p class="logo"> Maroc PC</p> 
-	 </header>
-  
+  <header class="header">
+    <p class="logo"> Maroc PC</p>
+  </header>
 
-         <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
-         
 
-         	<form class="loginBox" action="LoginPage.php" method="post" >
+  <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
 
-            <h1>Login</h1>
+    <form class="loginBox" action="LoginPage.php" method="post">
 
-    	 <input type="text" name="EmailAdresse" id="email" placeholder="Veuillez saisir votre email ">  
-    	 <input type="text" name="Password" id="password" placeholder="Veuillez saisir votre password">
-       <input type="submit" name="submitButton" value="Login">
-       <br> <br>
+      <h1>Login</h1>
+      <input type="text" name="EmailAdresse" placeholder="Veuillez saisir votre email ">
+      <input type="text" name="Password" placeholder="Veuillez saisir votre password">
+      <input type="submit" name="submitButton" value="Login">
+      <br> <br>
+      <a href="SigninPage.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
 
-        <a href="signinPage.php" style="font-size: 14px;">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
-    	 
-    	 </form>
-    	
-    </div>
-        
-    	
-    
-      <div align="center" style="font-weight: bold; background-color: yellow ;display:inline-block; width: 1300px;">
-        <p style="font-size: 40px;">Contact Us</p> 
-         <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
- Adress &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
- Télephone : 212 522 231 560/565 <br>
- Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
-</p></div>
-    	 
-    	 
-   
+    </form>
+
+  </div>
+
+  <div class="contactUs">
+    <p style="font-size: 40px;">Contact Us</p>
+    <p>Email &nbsp; &nbsp; : conatctmarocpc@gmail.com <br>
+      Adresse &nbsp; : Route d Eljadida, KM 7, CASABLANCA, Maroc <br>
+      Télephone : 212 522 231 560/565 <br>
+      Fax &nbsp; &nbsp; &nbsp; : 212 522 252 245 <br>
+    </p>
+  </div>
+
 </body>
+
 </html>
