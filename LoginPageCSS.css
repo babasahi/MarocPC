@@ -1,0 +1,81 @@
+.header {
+  max-height: 10%;
+  color: black;
+  background-color: yellow;
+  padding: 18px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 30px;
+  font-family: monospace;
+}
+
+.loginBox {
+  width: 300px;
+  padding: 40px;
+  background-color: #f5fffa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 18px;
+}
+.loginBox h1 {
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.loginBox input[type="text"]:focus,
+.loginBox input[type="password"]:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.loginBox input[type="submit"] {
+  border: 0;
+  background: green;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.loginBox input[type="submit"]:hover {
+  background: orangered;
+}
+
+.returnLink {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contactUs {
+  text-align: center;
+  font-weight: bold;
+  background-color: yellow;
+  display: inline-block;
+  width: 1300px;
+}

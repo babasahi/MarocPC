@@ -1,0 +1,48 @@
+.header {
+  color: black;
+  background-color: yellow;
+  padding: 18px;
+}
+.main {
+  height: 1500px;
+  width: 1300px;
+  display: block;
+  color: black;
+
+  text-align: center;
+  padding-top: 50px;
+  background-color: white;
+}
+
+table {
+  border-radius: 12px;
+  border-collapse: collapse;
+  width: 60%;
+  border: 5px solid black;
+  height: 20%;
+  color: black;
+  font-family: monospace;
+  font-weight: 300;
+  font-size: 20px;
+}
+th {
+  background-color: black;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 30px;
+  font-family: monospace;
+}
+.contactUs {
+  text-align: center;
+  font-weight: bold;
+  background-color: yellow;
+  display: inline-block;
+  width: 1300px;
+}

@@ -1,0 +1,40 @@
+.header {
+  color: black;
+  background-color: yellow;
+  padding: 14px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 30px;
+  font-family: monospace;
+}
+
+.Buttons button {
+  position: relative;
+  bottom: 85px;
+  left: 900px;
+  float: left;
+  background-color: black;
+  margin-top: 3px;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.text-aceuill {
+  padding-top: 120px;
+  padding-left: 250px;
+  padding-right: 200px;
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+  color: black;
+}

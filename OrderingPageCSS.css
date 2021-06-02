@@ -1,0 +1,80 @@
+.header {
+  color: black;
+  background-color: yellow;
+  padding: 18px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 30px;
+  font-family: monospace;
+}
+
+.OrderingBox {
+  width: 300px;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 18px;
+}
+
+.OrderingBox input[type="text"],
+.OrderingBox input[type="password"] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  margin-top: 5px;
+  text-align: center;
+  border: 2px solid black;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.OrderingBox input[type="text"]:focus,
+.OrderingBox input[type="password"]:focus {
+  width: 280px;
+  border-color: black;
+}
+
+.OrderingBox input[type="submit"] {
+  border: 0;
+  background: #7400b3;
+  font-weight: bolder;
+  font-size: 15px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 12px 30px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.OrderingBox h5 {
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.contactUs {
+  text-align: center;
+  font-weight: bold;
+  background-color: yellow;
+  display: inline-block;
+  width: 1300px;
+}
