@@ -23,11 +23,7 @@ an Ecommerce website for a computers store, built using HTML, CSS, JavaScript an
 
 ---
 
-### MarocPC is Coming soon! 🥳 🚀
-
-- Android: coming soon 👀
-- iOS/macOS: coming soon 👀.
-- Linux :coming soon 👀
+### MarocPC 🥳 🚀
 
 ---
 
