@@ -1,11 +1,11 @@
 <?php
 
-include("ConnectionBD.php");
+include("db_connection.php");
 session_start();
 
 if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
 } else {
-  header("location:LoginPage.php");
+  header("location:login_page.php");
 }
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
 
 <head>
   <title> Administration Page</title>
-  <link rel="stylesheet" href="AdministratorPageCSS.css">
+  <link rel="stylesheet" href="administrator_page.css">
 
 </head>
 

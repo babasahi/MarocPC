@@ -1,6 +1,6 @@
 <?php
 
-include("ConnectionBD.php");
+include("db_connection.php");
 session_start();
 
 if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {

@@ -1,5 +1,5 @@
 <?php
-include("ConnectionBD.php");
+include("db_connection.php");
 
 ?>
 
