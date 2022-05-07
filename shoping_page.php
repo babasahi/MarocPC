@@ -51,7 +51,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
       dots[slideIndex - 1].className += " active";
     }
   </script>
-  <link rel="stylesheet" href="ShopingPageCSS.css">
+  <link rel="stylesheet" href="shoping_page.css">
 
 
 </head>
@@ -118,7 +118,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
         }
 
         $_SESSION['ItemToBuy'] = "LG 27GN950-B";
-        header("location:OrderingPage.php");
+        header("location:ordering_page.php");
       }
 
 
@@ -136,7 +136,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
         }
 
         $_SESSION['ItemToBuy'] = "CyberPowerPC Gamer Extreme VR";
-        header("location:OrderingPage.php");
+        header("location:ordering_page.php");
       }
 
       if (isset($_POST['buyButton3'])) {
@@ -152,7 +152,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
           $_SESSION['ItemPrice'] = $data['prix_produit'];
         }
         $_SESSION['ItemToBuy'] = "HP DeskJet Plus 4120";
-        header("location:OrderingPage.php");
+        header("location:orderin_page.php");
       }
 
       ?>

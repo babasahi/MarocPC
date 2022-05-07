@@ -12,7 +12,7 @@ include("db_connection.php");
 	<meta name="description" content="this is Reda Fillali Project">
 	<title>Maroc PC</title>
 
-	<link rel="stylesheet" href="WelcomePageCSS.css">
+	<link rel="stylesheet" href="welcome_page.css">
 
 </head>
 
@@ -25,9 +25,9 @@ include("db_connection.php");
 
 	<div class="Buttons ">
 
-		<a href="http://localhost/MarocPc/LoginPage.php"> <button type="button"> Login </button> </a>
-		<a href="http://localhost/MarocPc/ShopingPage.php"><button type="button"> Shop </button> </a>
-		<a href="http://localhost/MarocPc/CustomerPage.php"><button type="button"> Profile </button> </a>
+		<a href="http://localhost/MarocPc/Login_page.php"> <button type="button"> Login </button> </a>
+		<a href="http://localhost/MarocPc/Shoping_page.php"><button type="button"> Shop </button> </a>
+		<a href="http://localhost/MarocPc/Customer_page.php"><button type="button"> Profile </button> </a>
 	</div>
 
 

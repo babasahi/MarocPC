@@ -6,7 +6,7 @@ session_start();
 if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
   $name = $_SESSION['userName'];
 } else {
-  header("location:LoginPage.php");
+  header("location:login_page.php");
 }
 ?>
 
@@ -25,7 +25,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
 
   <title> Ordering Page</title>
 
-  <link rel="stylesheet" href="OrderingPageCSS.css">
+  <link rel="stylesheet" href="ordering_page.css">
 
 
 </head>
@@ -38,7 +38,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
 
   <div id="main" style="background-image: url(/MarocPC/Images/Purchasing.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
 
-    <form class="OrderingBox" action="OrderingPage.php" method="post">
+    <form class="OrderingBox" action="ordering_page.php" method="post">
 
       <h5> Acheter <?php echo ($_SESSION['ItemToBuy']); ?>
         <br> Prix : <?php echo ($_SESSION['ItemPrice']); ?> Dirham
@@ -52,7 +52,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
 
       <input type="submit" name="buy" value="Commandez" style="color: black;">
 
-      <a href="http://localhost/MarocPc/CustomerPage.php"> retourner ici</a>
+      <a href="http://localhost/MarocPc/customer_page.php"> retourner ici</a>
     </form>
 
     <?php if (isset($_POST['buy'])) {
@@ -69,7 +69,7 @@ if (isset($_SESSION['IsLogedIn']) && $_SESSION['IsLogedIn'] == true) {
         $result = mysqli_query($link, $myQuery);
         $Secondresult = mysqli_query($link, $mySecondQuery);
         if ($result && $Secondresult) {
-          header("location:ShopingPage.php");
+          header("location:shoping_page.php");
         } elseif (!$result && !$Secondresult) {
           echo "erreur";
         }

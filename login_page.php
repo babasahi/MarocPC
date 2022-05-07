@@ -23,7 +23,7 @@ if (isset($_POST['submitButton'])) {
         $_SESSION['userName'] = $data['nom_client'];
         $_SESSION['userId']   = $data['id_client'];
         echo "Loged in Sucefully !";
-        header("location:ShopingPage.php");
+        header("location:shoping_page.php");
       }
 
       echo "Wrong Password or email ";
@@ -41,7 +41,7 @@ if (isset($_POST['submitButton'])) {
 <head>
   <title>Login Page</title>
 
-  <link rel="stylesheet" href="LoginPageCSS.css">
+  <link rel="stylesheet" href="login_page.css">
 
 </head>
 
@@ -53,14 +53,14 @@ if (isset($_POST['submitButton'])) {
 
   <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
 
-    <form class="loginBox" action="LoginPage.php" method="post">
+    <form class="loginBox" action="login_page.php" method="post">
 
       <h1>Login</h1>
       <input type="text" name="EmailAdresse" placeholder="Veuillez saisir votre email ">
       <input type="text" name="Password" placeholder="Veuillez saisir votre password">
       <input type="submit" name="submitButton" value="Login">
       <br> <br>
-      <a href="SigninPage.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
+      <a href="signin_page.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
 
     </form>
 

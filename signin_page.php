@@ -15,7 +15,7 @@ if (isset($_POST['submitButton'])) {
 
     if ($result) {
 
-      header("location:LoginPage.php");
+      header("location:login_page.php");
     } elseif (!$result) {
       # code...
 
@@ -32,7 +32,7 @@ if (isset($_POST['submitButton'])) {
 <head>
   <title>Login Page</title>
 
-  <link rel="stylesheet" href="SigninPageCSS.css">
+  <link rel="stylesheet" href="signin_page.css">
 
 
 </head>
@@ -46,7 +46,7 @@ if (isset($_POST['submitButton'])) {
   <div id="main" style="background-image: url(/MarocPC/Images/LoginPage.jpg); height: 800px; width: 1300px; display: block; background-size: 100%; background-position: center; background-size: cover; ">
 
 
-    <form class="SigninBox" action="SigninPage.php" method="post">
+    <form class="SigninBox" action="signin_page.php" method="post">
 
       <h1>Sign in</h1>
       <input type="text" name="NomComplet" placeholder="Nom Complet">
@@ -55,7 +55,7 @@ if (isset($_POST['submitButton'])) {
       <input type="submit" name="submitButton" value="Sign In">
       <br> <br>
 
-      <a href="LoginPage.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
+      <a href="login_page.php" class="returnLink">Vous n'avez pas de compte ? <br> Inscrivez-vous </a>
 
     </form>
 
