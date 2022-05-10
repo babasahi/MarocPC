@@ -44,9 +44,8 @@ Ecommerce website for a computer store, built using HTML, CSS, JavaScript and PH
 
 # 🧐 Project philosophy
 
-> The MarocPC is XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
->
-> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+> MarocPC is an E-Commmerce website that let you loging, logout, browse inventory, make orders and so on .
+> As an admin you can see inventory stats, clients stats, manage the database etc.
 
 # 📒 Wiki
 
@@ -56,10 +55,12 @@ This project repository has [MarocPC](https://github.com/babe-saleh-mahfoud/Maro
 
 Here's a brief high-level overview of the tech stack the MarocPC app uses:
 
-- This project uses the [Flutter app development framework](https://flutter.dev/). Flutter is a cross-platform hybrid app development platform which allows us to use a single codebase for apps on mobile, desktop, and the web.
-- For persistent storage (database), the app uses the [Hive](https://hivedb.dev/) package which allows the app to create a custom storage schema and save it to a local database.
-- To send local push notifications, the app uses the [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package which supports Android, iOS, and macOS.
-  - 🚨 Currently, notifications aren't working on macOS. This is a known issue that we are working to resolve!
+- This project uses [MySQL](https://www.mysql.com) for backend. MySQL is an open-source relational database management system (RDBMS).
+  MySQL is free and open-source software under the terms of the GNU General Public License, and is also available under a variety of proprietary licenses
+- for server-side scripting i used [PHP](https://www.php.net).
+
+- For frontend, the app uses [HTML](https://en.wikipedia.org/wiki/HTML#:~:text=The%20HyperText%20Markup%20Language%20or,scripting%20languages%20such%20as%20JavaScript.),[CSS](https://en.wikipedia.org/wiki/CSS).
+
 - The app uses the font ["Work Sans"](https://fonts.google.com/specimen/Work+Sans) as its main font, and the design of the app adheres to the material design guidelines.
 
 For more information on the technologies that power the Well app, check out the [Tech Stack](https://github.com/chroline/well_app/wiki/Tech-Stack) page on our wiki.
