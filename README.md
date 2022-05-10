@@ -76,13 +76,8 @@ If you have a contribution in mind, please check out our [Contribution Guide](ht
 If you want to say thank you and/or support active development of the Well app:
 
 - Add a GitHub Star to the project!
-- Tweet about the project on your Twitter!
-  - Tag [@colegawin\_](https://twitter.com/colegawin\_) and/or `#thewellapp`
-- Leave us a review [on the iOS App Store](https://apps.apple.com/us/app/well-reboot-your-mindset/id1573357406)!
-
-Thanks so much for your interest in growing the reach of the Well app!
-
-_**PS:** consider sponsoring me ([Cole Gawin](https://colegaw.in)) to continue the development of this project on [BuyMeACoffee](https://buymeacoffee.com/colegawin) :)_
+- Connect me on Linkedin about!
+  [Babe Saleh Mahfoud](https://www.linkedin.com/in/babe-saleh-mahfoud-519b52200/).
 
 # ⚠️ License
 
@@ -95,5 +90,3 @@ The Well app is free and open-source software licensed under the GNU General Pub
 <br />
 
 # 💛
-
-Reminder that _you are great, you are enough, and your presence is valued._ If you are struggling with your mental health, please reach out to someone you love and consult a professional. [There are many resources for you to get help in a time of need.](https://www.nimh.nih.gov/health/find-help)
