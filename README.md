@@ -16,7 +16,7 @@ Ecommerce website for a computer store, built using HTML, CSS, JavaScript and PH
 <img src='https://img.shields.io/github/license/babe-saleh-mahfoud/MarocPC?style=for-the-badge'>
   
 </a>
-  <img src='https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white'>
+  <img src='https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=php&logoColor=white'>
 </div>
 
 <br />
