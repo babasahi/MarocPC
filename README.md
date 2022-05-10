@@ -1,12 +1,12 @@
-# MarocPC
-
-an Ecommerce website for a computers store, built using HTML, CSS, JavaScript and PHP
 ![MarocPC](thumbnail.png)
 
 <div align='center'>
-  
+
+# MarocPC
+
+Ecommerce website for a computer store, built using HTML, CSS, JavaScript and PHP.
 <a href='https://github.com/babe-saleh-mahfoud/MarocPC/releases'>
-  
+
 <img src='https://img.shields.io/github/v/release/babe-saleh-mahfoud/MarocPC?color=%23FDD835&label=version&style=for-the-badge'>
   
 </a>
@@ -76,7 +76,7 @@ If you want to say thank you and/or support active development of the Well app:
 
 - Add a GitHub Star to the project!
 - Tweet about the project on your Twitter!
-  - Tag [@colegawin\_](https://twitter.com/colegawin_) and/or `#thewellapp`
+  - Tag [@colegawin\_](https://twitter.com/colegawin\_) and/or `#thewellapp`
 - Leave us a review [on the iOS App Store](https://apps.apple.com/us/app/well-reboot-your-mindset/id1573357406)!
 
 Thanks so much for your interest in growing the reach of the Well app!
